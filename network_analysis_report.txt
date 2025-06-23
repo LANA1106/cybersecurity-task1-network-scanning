@@ -156,6 +156,5 @@ TOOLS USED:
 ==========
 - Nmap 7.97 for network discovery
 - Windows ipconfig for network configuration
-- MAC address vendor lookup for device identification
 
 END OF REPORT
