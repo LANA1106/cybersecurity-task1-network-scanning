@@ -1,0 +1,161 @@
+NETWORK SCAN ANALYSIS REPORT
+============================
+
+Date: June 23, 2025
+Time: 12:49 IST
+Scanner: Nmap 7.97
+Network Range: 192.168.31.0/24
+Scan Type: TCP SYN Scan (-sS)
+
+NETWORK CONFIGURATION
+====================
+Local IP Address: 192.168.31.183
+Subnet Mask: 255.255.255.0 (/24)
+Default Gateway: 192.168.31.1
+Network Type: Wireless LAN (Wi-Fi)
+DNS Suffix: lan
+
+DISCOVERED DEVICES
+==================
+
+1. DEVICE: 192.168.31.1 (Gateway/Router)
+   MAC Address: FC:B0:DE:C5:DB:9E
+   Vendor: Cloud Network Technology Singapore PTE.
+   Device Type: Network Gateway/Router
+   Status: UP (ARP Response)
+   Security Risk: MEDIUM - Main entry point to network
+
+2. DEVICE: 192.168.31.13
+   MAC Address: 10:2F:A3:66:85:29
+   Vendor: Shenzhen Uvision-tech Technology Ltd
+   Device Type: IoT/Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IoT device with potential vulnerabilities
+
+3. DEVICE: 192.168.31.31
+   MAC Address: 48:EA:63:C9:B1:2A
+   Vendor: Zhejiang Uniview Technologies
+   Device Type: IP Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IP camera with potential default credentials
+
+4. DEVICE: 192.168.31.102
+   MAC Address: 10:2F:A3:66:89:18
+   Vendor: Shenzhen Uvision-tech Technology Ltd
+   Device Type: IoT/Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IoT device with potential vulnerabilities
+
+5. DEVICE: 192.168.31.103
+   MAC Address: 10:2F:A3:66:96:E8
+   Vendor: Shenzhen Uvision-tech Technology Ltd
+   Device Type: IoT/Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IoT device with potential vulnerabilities
+
+6. DEVICE: 192.168.31.151
+   MAC Address: 48:EA:63:C1:1A:73
+   Vendor: Zhejiang Uniview Technologies
+   Device Type: IP Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IP camera with potential default credentials
+
+7. DEVICE: 192.168.31.152
+   MAC Address: 48:EA:63:C7:91:DD
+   Vendor: Zhejiang Uniview Technologies
+   Device Type: IP Security Camera
+   Status: UP (ARP Response)
+   Security Risk: HIGH - IP camera with potential default credentials
+
+8. DEVICE: 192.168.31.236
+   MAC Address: CE:2F:50:C1:D6:BF
+   Vendor: Unknown
+   Device Type: Unknown (Possibly Mobile/Computer)
+   Status: UP (ARP Response)
+   Security Risk: MEDIUM - Unidentified device
+
+9. DEVICE: 192.168.31.249
+   MAC Address: 02:4C:58:D4:23:8D
+   Vendor: Unknown
+   Device Type: Unknown (Possibly Mobile/Computer)
+   Status: UP (ARP Response)
+   Security Risk: MEDIUM - Unidentified device
+
+SECURITY ASSESSMENT
+===================
+
+CRITICAL FINDINGS:
+- 5 IP cameras from 2 different vendors detected
+- Multiple IoT devices on the network
+- Unknown devices present
+
+HIGH RISK DEVICES:
+- 192.168.31.13, 192.168.31.31, 192.168.31.102, 192.168.31.103, 192.168.31.151, 192.168.31.152
+- All are IP cameras or IoT devices
+- Common vulnerabilities: Default credentials, unencrypted communications, firmware bugs
+
+SECURITY RECOMMENDATIONS:
+=========================
+
+IMMEDIATE ACTIONS:
+1. Change default passwords on all IP cameras
+2. Update firmware on all IoT devices
+3. Identify unknown devices (192.168.31.236, 192.168.31.249)
+4. Implement network segmentation for IoT devices
+
+NETWORK SECURITY MEASURES:
+1. Enable WPA3 encryption on Wi-Fi
+2. Implement MAC address filtering
+3. Set up VLAN segregation for IoT devices
+4. Configure firewall rules to block unnecessary traffic
+5. Enable network monitoring and logging
+
+DEVICE-SPECIFIC RECOMMENDATIONS:
+1. IP Cameras:
+   - Change admin credentials
+   - Disable unnecessary services
+   - Enable HTTPS/SSL encryption
+   - Update to latest firmware
+   - Disable remote access if not needed
+
+2. Router/Gateway:
+   - Update firmware
+   - Change default admin password
+   - Disable WPS if enabled
+   - Enable access logging
+   - Configure guest network for IoT devices
+
+COMMON PORTS TO MONITOR:
+=======================
+Port 22  - SSH (Secure Shell)
+Port 23  - Telnet (Insecure)
+Port 53  - DNS
+Port 80  - HTTP (Web interface)
+Port 443 - HTTPS (Secure web)
+Port 554 - RTSP (Camera streaming)
+Port 8080 - Alternative HTTP
+Port 37777 - Dahua camera default port
+Port 34567 - Hikvision camera default port
+
+NEXT STEPS:
+==========
+1. Perform detailed port scan on each device
+2. Service enumeration on open ports
+3. Vulnerability assessment using tools like Nessus
+4. Implement security hardening measures
+5. Set up continuous monitoring
+
+SCAN STATISTICS:
+===============
+Total IPs Scanned: 256 (192.168.31.0/24)
+Active Devices Found: 9
+Response Time: Variable (ARP responses)
+Scan Duration: Approximately 2-3 minutes
+
+TOOLS USED:
+==========
+- Nmap 7.97 for network discovery
+- Windows ipconfig for network configuration
+- MAC address vendor lookup for device identification
+
+END OF REPORT
