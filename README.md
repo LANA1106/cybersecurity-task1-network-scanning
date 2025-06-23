@@ -1,5 +1,9 @@
 # Task 1: Network Port Scanning - Cybersecurity Internship
 
+**Task Completed By**: Rajveer Solanki  
+**Date**: June 23, 2025  
+**Status**: READY FOR SUBMISSION ✅
+
 ## Objective
 Learn to discover open ports on devices in your local network to understand network exposure and potential security risks.
 
